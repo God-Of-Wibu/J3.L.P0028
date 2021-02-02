@@ -1,5 +1,8 @@
 package com.narga.salon_nails.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 
 public class Image {
 

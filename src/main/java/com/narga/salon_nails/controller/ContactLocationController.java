@@ -8,6 +8,6 @@ public class ContactLocationController {
 
 	@GetMapping("/")
 	public String locationContact() {
-		return 
+		
 	}
 }
