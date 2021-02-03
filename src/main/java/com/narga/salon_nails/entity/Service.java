@@ -2,8 +2,10 @@ package com.narga.salon_nails.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "service")
 public class Service {
 
 	@Column(name= "nameService")
