@@ -11,7 +11,7 @@ public class DataBaseConfig {
 		driverManagerDataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		driverManagerDataSource.setUsername("sa");
 		driverManagerDataSource.setPassword("Narga1408");
-		driverManagerDataSource.setUrl("jdbc:sqlserver://localhost:1433;databaseName=");
+		driverManagerDataSource.setUrl("jdbc:sqlserver://localhost:1433;databaseName=SalonNails");
 		return driverManagerDataSource;
 	}
 

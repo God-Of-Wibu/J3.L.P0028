@@ -2,12 +2,24 @@ package com.narga.salon_nails.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Table(name = "service")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Service {
 
+	@Id
+	@Column(name = "id")
+	@GeneratedValue
+	private Integer id;
+	
 	@Column(name= "nameService")
 	private String nameService;
 	

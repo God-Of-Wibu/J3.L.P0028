@@ -6,8 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@Setter
+@Getter
+@NoArgsConstructor
 public class Image {
 	@Id
 	@Column(name = "id")
