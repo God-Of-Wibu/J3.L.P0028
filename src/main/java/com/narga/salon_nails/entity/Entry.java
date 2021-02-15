@@ -12,6 +12,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
@@ -19,40 +21,41 @@ import javax.persistence.Column;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Post {
-	
+public class Entry {
+	public enum Type {
+		INTRODUCTION, ENTRY;
+	}
+
 	@Id
 	@Column(name = "id")
 	@GeneratedValue
 	private int id;
-	
+
 	@Column(name = "title")
-    private String title;
-    
-	@Column(name = "content", columnDefinition = "nvarchar(1000)")
-    private String content;
-    
+	private String title;
+
+	@Column(name = "description", columnDefinition = "nvarchar(1000)")
+	private String description;
+
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "image")
-    private Image image;
+	private Image image;
+	
+	@Column(name = "date")
+	private Date date;
 
-
-	public Post(int id, String title, String content, Image image, Type type) {
+	public Entry(int id, String title, String description, Image image, Type type, Date date) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.content = content;
+		this.description = description;
 		this.image = image;
-		this.type= type;
+		this.type = type;
+		this.date = date;
 	}
-    
-	
-    public enum Type{
-		IMAGE, ARTICLE;
-	}
-    
-    @Enumerated(EnumType.STRING)
+
+	@Enumerated(EnumType.STRING)
 	@Column(name = "type")
-    private Type type;
-    
+	private Type type;
+
 }

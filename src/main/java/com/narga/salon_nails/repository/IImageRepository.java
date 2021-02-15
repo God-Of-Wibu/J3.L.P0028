@@ -7,5 +7,4 @@ import com.narga.salon_nails.entity.Image;
 
 @Repository
 public interface IImageRepository extends CrudRepository<Image, Integer>{
-
 }

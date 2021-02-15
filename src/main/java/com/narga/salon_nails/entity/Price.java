@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Service {
+public class Price {
 
 	@Id
 	@Column(name = "id")
@@ -26,7 +26,7 @@ public class Service {
 	@Column(name= "price")
 	private float price;
 
-	public Service(String nameService, float price) {
+	public Price(String nameService, float price) {
 		super();
 		this.nameService = nameService;
 		this.price = price;
