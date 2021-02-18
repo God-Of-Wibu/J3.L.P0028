@@ -19,10 +19,10 @@ public class Image {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
+
 	@Column(name = "url", nullable = false)
 	private String url;
-	
+
 	@Column(name = "file_location", nullable = true)
 	private String fileLocation;
 

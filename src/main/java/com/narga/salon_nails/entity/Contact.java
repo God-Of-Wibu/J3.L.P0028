@@ -32,7 +32,7 @@ public class Contact {
 	private String country;
 
 	@Column(name = "phone")
-	private Integer phone;
+	private String phone;
 
 	@Column(name = "email")
 	private String email;
