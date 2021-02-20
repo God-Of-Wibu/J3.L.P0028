@@ -6,17 +6,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@Setter
+@Getter
+@NoArgsConstructor
 public class Image {
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
+
 	@Column(name = "url", nullable = false)
 	private String url;
-	
+
 	@Column(name = "file_location", nullable = true)
 	private String fileLocation;
 
